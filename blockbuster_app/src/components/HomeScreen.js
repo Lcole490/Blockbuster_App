@@ -1,36 +1,19 @@
 import React from 'react'
 import './HomeScreen.css'
+import Nav from './Nav'
+import Banner from './Banner'
 
 function HomeScreen() {
     return (
         <div className = "homeScreen">
             {/* Navbar */}
 
+            <Nav />
+
             {/* Banner */}
-<h1>Testing Testing 123</h1>
-<h1>Testing Testing 123</h1>
-<h1>Testing Testing 123</h1>
-<h1>Testing Testing 123</h1>
-<h1>Testing Testing 123</h1>
-<h1>Testing Testing 123</h1>
-<h1>Testing Testing 123</h1>
-<h1>Testing Testing 123</h1>
-<h1>Testing Testing 123</h1>
-<h1>Testing Testing 123</h1>
-<h1>Testing Testing 123</h1>
-<h1>Testing Testing 123</h1>
-<h1>Testing Testing 123</h1>
-<h1>Testing Testing 123</h1>
-<h1>Testing Testing 123</h1>
-<h1>Testing Testing 123</h1>
-<h1>Testing Testing 123</h1>
-<h1>Testing Testing 123</h1>
-<h1>Testing Testing 123</h1>
-<h1>Testing Testing 123</h1>
-<h1>Testing Testing 123</h1>
-<h1>Testing Testing 123</h1>
-<h1>Testing Testing 123</h1>
-<h1>Testing Testing 123</h1>
+
+            <Banner />
+
             {/* Row */}
         </div>
     )
