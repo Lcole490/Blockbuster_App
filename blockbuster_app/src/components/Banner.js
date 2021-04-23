@@ -1,7 +1,28 @@
-import React from 'react'
+import React , {useState, useEffect} from 'react'
 import './Banner.css'
+import axios from "../axios"
+import requests from '../Requests'
 
 function Banner() {
+
+    const [movie, setMovie] = useState([]);
+
+    useEffect(() =>{
+
+        async function fetchData(){
+            const request = await axios.get(requests.fetchTrending);
+            setMovie(
+                request.data.results[
+                    Math.floor(Math.random() * request.data.results.length -1)
+                ]
+            );
+
+            return request;
+        }
+            fetchData();
+    }, []);
+
+    console.log(movie);
 
     // Truncate function to cut off text from descriptions that are too long in the banner
     // The truncate function takes in a string and the "n" represents the number of characters (limit)
@@ -13,7 +34,7 @@ function Banner() {
         <header className = 'banner' style = {{
             backgroundSize: "cover",
             backgroundPosition: "center center",
-            backgroundImage : `url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Black_flag.svg/1200px-Black_flag.svg.png")`
+            backgroundImage : `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`
         }}>
             
 
