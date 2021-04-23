@@ -39,12 +39,15 @@ function Banner() {
             
 
             <div className = "bannerContents">
-                <h1 className = "bannerTitle">Movie Name</h1>
+                <h1 className = "bannerTitle">
+                    {movie?.title || movie?.name || movie?.original_name}
+                </h1>
                 <div className = "bannerButtons">
                     <button className="bannerButton">Play</button>
                     <button className= "bannerButton">My List</button>
                 </div>
-                <h1 className = "bannerDescription"> {truncate (`Description of film goes here Description of film goes hereDescription of film goes hereDescription of film goes hereDescription of film goes hereDescription of film goes hereDescription of film goes hereDescription of film goes hereDescription of film goes hereDescription of film goes hereDescription of film goes hereDescription of film goes hereDescription of film goes hereDescription of film goes here`, 150)}</h1>
+                <h1 className = "bannerDescription"> {truncate (
+                    movie?.overview, 150)}</h1>
             </div>
 
             <div className = "bannerFadeBottom" />
