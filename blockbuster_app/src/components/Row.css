@@ -19,4 +19,26 @@
 
 .rowPoster{
     max-height: 100px;
+    object-fit: contain;
+    margin-right: 10px;
+    width: 100%;
+    transition: transform 450ms;
+}
+
+
+.rowPoster:hover{
+    transform:scale(1.08);
+    opacity: 1;
+    object-position: center;
+}
+
+
+.rowPosterLarge{
+    max-height: 250px;
+}
+
+
+.rowPosterLarge:hover{
+    transform: scale(1.09);
+    opacity: 1;
 }
